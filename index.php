@@ -21,7 +21,7 @@ if($messageText == "hi") {
     $answer = "Hello";
 }
 
-if($messageText == "Jeldon" "jeldon") {
+if($messageText == "Jeldon";"jeldon") {
     $answer = "gwapo";
 }
 
