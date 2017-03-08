@@ -29,14 +29,6 @@ if($messageText == "sure?") {
     $answer = "lagi";
 }
 
-if($messageText == "file"){
-    var fileObj = {
-     "type":"file", 
-     "url":"http://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf"
-};
-context.sendResponse(JSON.stringify(fileObj));
-}
-
 $response = [
     'recipient' => [ 'id' => $senderId ],
     'message' => [ 'text' => $answer ]
