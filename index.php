@@ -15,6 +15,13 @@ $input = json_decode(file_get_contents('php://input'), true);
 $senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
 $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 
+curl -X POST -H "Content-Type: application/json" -d '{
+  "recipient":{
+  	"id":"USER_ID"
+  },
+  "sender_action":"typing_on"
+}' "https://graph.facebook.com/v2.6/me/messages?access_token=AACXoXp8gMQBAJqFzy9mYKpIRJUz5nf2zaZCgUIaLYdsVRPv4QQtGQJheDN305LYAMN3LRh1B0xrZADLtQZCIZBFJSZBfW3HHNKaCWl8L3IoGcUIk4wzi2ZBwseEndis5B0D3lukGWvAUcy3uKvI2cdW69dbNrGhrCQ4rvG2U32QZDZD" 
+
 
 $answer = "I don't understand. Ask me 'hi'.";
 if($messageText == "hi") {
