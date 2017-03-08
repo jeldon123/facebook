@@ -21,6 +21,14 @@ if($messageText == "hi") {
     $answer = "Hello";
 }
 
+if($messageText == "jeldon") {
+    $answer = "gwapo";
+}
+
+if($messageText == "sure?") {
+    $answer = "lagi";
+}
+
 $response = [
     'recipient' => [ 'id' => $senderId ],
     'message' => [ 'text' => $answer ]
