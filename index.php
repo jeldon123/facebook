@@ -39,7 +39,6 @@ $senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
 $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 
 
-$answer = "I don't understand. Ask me 'hi'.";
 if($messageText == "jeldon") {
     $answer = "gwapo";
 }
