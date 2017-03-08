@@ -39,12 +39,6 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($response));
 curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 curl_exec($ch);
 curl_close($ch);
-curl -X POST -H "Content-Type: application/json" -d '{
-  "recipient":{
-  	"id":"USER_ID"
-  },
-  "sender_action":"typing_on"
-}' "https://graph.facebook.com/v2.6/me/messages?access_token='.$accessToken
 
 
 //based on http://stackoverflow.com/questions/36803518
