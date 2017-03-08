@@ -19,6 +19,9 @@ $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 $answer = "I don't understand. Ask me 'hi'.";
 if($messageText == "hi") {
     $answer = "Hello";
+  
+  if($messageText == "jeldon") {
+    $answer = "pogi";
 }
 
 $response = [
