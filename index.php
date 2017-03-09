@@ -20,7 +20,6 @@ if($messageText == "hi") {
     $answer = "Hello";
 }
 
-  let text = text1.toLowerCase()
 if($messageText == "jeldon") {
     $answer = "gwapo";
 }
