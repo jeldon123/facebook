@@ -31,24 +31,7 @@ if($messageText == "sure?") {
 $response = [
     'recipient' => [ 'id' => $senderId ],
     'message' => [ 'text' => $answer ]
- 
-];
-
-/**
- * Some Basic rules to validate incoming messages
- */
-if(preg_match('[time|current time|now]', strtolower($message))) {
-
-    // Make request to Time API
-    ini_set('user_agent','Mozilla/4.0 (compatible; MSIE 6.0)');
-    $result = file_get_contents("http://www.timeapi.org/utc/now?format=%25a%20%25b%20%25d%20%25I:%25M:%25S%20%25Y");
-    if($result != '') {
-        $message_to_reply = $result;
-    }
-} else {
-    $message_to_reply = 'Huh! what do you mean?';
-}
-print $message_to_reply;
+  
 ];
 $ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token='.$accessToken);
 curl_setopt($ch, CURLOPT_POST, 1);
